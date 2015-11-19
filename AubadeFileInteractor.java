@@ -7,13 +7,26 @@ import java.util.Scanner;
 
 public class AubadeFileInteractor {
 
+	public final static String[] lineList;
 	public final static String[] wordList;
 	
 	static{
+		// needs to be in this order
+		lineList = getLineList();
 		wordList = getWordList();
 	}
+	
+	private static String[] getWordList(){
+		ArrayList<String> stringList = new ArrayList<String>();
+		for(String s : lineList){
+			String[] words = s.split("\\s+"); // split on whitespace
+			for(String word : words) stringList.add(word);
+		}
+		String[] retWordList = stringList.toArray(new String[stringList.size()]);
+		return retWordList;
+	}
 
-	private static String[] getWordList() {
+	private static String[] getLineList() {
 		Scanner aubadeScanner = null;
 		try {
 			aubadeScanner = new Scanner(new File("src/Aubade.txt"));
@@ -31,8 +44,8 @@ public class AubadeFileInteractor {
 			System.out.println("end");
 		}
 		aubadeScanner.close();
-		String[] strWordList = stringList.toArray(new String[stringList.size()]);
-		return strWordList;
+		String[] strlineList = stringList.toArray(new String[stringList.size()]);
+		return strlineList;
 	}
 	
 }
