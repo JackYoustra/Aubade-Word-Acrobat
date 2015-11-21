@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		044F960D1C003D670016ADEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F960C1C003D670016ADEF /* AppDelegate.swift */; };
+		044F960F1C003D670016ADEF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F960E1C003D670016ADEF /* GameScene.swift */; };
+		044F96111C003D670016ADEF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 044F96101C003D670016ADEF /* GameScene.sks */; };
+		044F96131C003D670016ADEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044F96121C003D670016ADEF /* Assets.xcassets */; };
+		044F96161C003D670016ADEF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044F96141C003D670016ADEF /* MainMenu.xib */; };
+		044F96211C003D670016ADEF /* Aubade_Word_AcrobatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F96201C003D670016ADEF /* Aubade_Word_AcrobatTests.swift */; };
+		044F962C1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F962B1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		044F961D1C003D670016ADEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 044F96011C003D670016ADEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 044F96081C003D670016ADEF;
+			remoteInfo = "Aubade Word Acrobat";
+		};
+		044F96281C003D670016ADEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 044F96011C003D670016ADEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 044F96081C003D670016ADEF;
+			remoteInfo = "Aubade Word Acrobat";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		044F96091C003D670016ADEF /* Aubade Word Acrobat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aubade Word Acrobat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		044F960C1C003D670016ADEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		044F960E1C003D670016ADEF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		044F96101C003D670016ADEF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		044F96121C003D670016ADEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		044F96151C003D670016ADEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		044F96171C003D670016ADEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044F961C1C003D670016ADEF /* Aubade Word AcrobatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aubade Word AcrobatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		044F96201C003D670016ADEF /* Aubade_Word_AcrobatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aubade_Word_AcrobatTests.swift; sourceTree = "<group>"; };
+		044F96221C003D670016ADEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044F96271C003D670016ADEF /* Aubade Word AcrobatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aubade Word AcrobatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		044F962B1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aubade_Word_AcrobatUITests.swift; sourceTree = "<group>"; };
+		044F962D1C003D670016ADEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		044F96061C003D670016ADEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044F96191C003D670016ADEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044F96241C003D670016ADEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		044F96001C003D670016ADEF = {
+			isa = PBXGroup;
+			children = (
+				044F960B1C003D670016ADEF /* Aubade Word Acrobat */,
+				044F961F1C003D670016ADEF /* Aubade Word AcrobatTests */,
+				044F962A1C003D670016ADEF /* Aubade Word AcrobatUITests */,
+				044F960A1C003D670016ADEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		044F960A1C003D670016ADEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				044F96091C003D670016ADEF /* Aubade Word Acrobat.app */,
+				044F961C1C003D670016ADEF /* Aubade Word AcrobatTests.xctest */,
+				044F96271C003D670016ADEF /* Aubade Word AcrobatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		044F960B1C003D670016ADEF /* Aubade Word Acrobat */ = {
+			isa = PBXGroup;
+			children = (
+				044F960C1C003D670016ADEF /* AppDelegate.swift */,
+				044F960E1C003D670016ADEF /* GameScene.swift */,
+				044F96101C003D670016ADEF /* GameScene.sks */,
+				044F96121C003D670016ADEF /* Assets.xcassets */,
+				044F96141C003D670016ADEF /* MainMenu.xib */,
+				044F96171C003D670016ADEF /* Info.plist */,
+			);
+			path = "Aubade Word Acrobat";
+			sourceTree = "<group>";
+		};
+		044F961F1C003D670016ADEF /* Aubade Word AcrobatTests */ = {
+			isa = PBXGroup;
+			children = (
+				044F96201C003D670016ADEF /* Aubade_Word_AcrobatTests.swift */,
+				044F96221C003D670016ADEF /* Info.plist */,
+			);
+			path = "Aubade Word AcrobatTests";
+			sourceTree = "<group>";
+		};
+		044F962A1C003D670016ADEF /* Aubade Word AcrobatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				044F962B1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift */,
+				044F962D1C003D670016ADEF /* Info.plist */,
+			);
+			path = "Aubade Word AcrobatUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		044F96081C003D670016ADEF /* Aubade Word Acrobat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 044F96301C003D670016ADEF /* Build configuration list for PBXNativeTarget "Aubade Word Acrobat" */;
+			buildPhases = (
+				044F96051C003D670016ADEF /* Sources */,
+				044F96061C003D670016ADEF /* Frameworks */,
+				044F96071C003D670016ADEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aubade Word Acrobat";
+			productName = "Aubade Word Acrobat";
+			productReference = 044F96091C003D670016ADEF /* Aubade Word Acrobat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		044F961B1C003D670016ADEF /* Aubade Word AcrobatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 044F96331C003D670016ADEF /* Build configuration list for PBXNativeTarget "Aubade Word AcrobatTests" */;
+			buildPhases = (
+				044F96181C003D670016ADEF /* Sources */,
+				044F96191C003D670016ADEF /* Frameworks */,
+				044F961A1C003D670016ADEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				044F961E1C003D670016ADEF /* PBXTargetDependency */,
+			);
+			name = "Aubade Word AcrobatTests";
+			productName = "Aubade Word AcrobatTests";
+			productReference = 044F961C1C003D670016ADEF /* Aubade Word AcrobatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		044F96261C003D670016ADEF /* Aubade Word AcrobatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 044F96361C003D670016ADEF /* Build configuration list for PBXNativeTarget "Aubade Word AcrobatUITests" */;
+			buildPhases = (
+				044F96231C003D670016ADEF /* Sources */,
+				044F96241C003D670016ADEF /* Frameworks */,
+				044F96251C003D670016ADEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				044F96291C003D670016ADEF /* PBXTargetDependency */,
+			);
+			name = "Aubade Word AcrobatUITests";
+			productName = "Aubade Word AcrobatUITests";
+			productReference = 044F96271C003D670016ADEF /* Aubade Word AcrobatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		044F96011C003D670016ADEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = HouseMixer;
+				TargetAttributes = {
+					044F96081C003D670016ADEF = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					044F961B1C003D670016ADEF = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 044F96081C003D670016ADEF;
+					};
+					044F96261C003D670016ADEF = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 044F96081C003D670016ADEF;
+					};
+				};
+			};
+			buildConfigurationList = 044F96041C003D670016ADEF /* Build configuration list for PBXProject "Aubade Word Acrobat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 044F96001C003D670016ADEF;
+			productRefGroup = 044F960A1C003D670016ADEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				044F96081C003D670016ADEF /* Aubade Word Acrobat */,
+				044F961B1C003D670016ADEF /* Aubade Word AcrobatTests */,
+				044F96261C003D670016ADEF /* Aubade Word AcrobatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		044F96071C003D670016ADEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044F96131C003D670016ADEF /* Assets.xcassets in Resources */,
+				044F96111C003D670016ADEF /* GameScene.sks in Resources */,
+				044F96161C003D670016ADEF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044F961A1C003D670016ADEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044F96251C003D670016ADEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		044F96051C003D670016ADEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044F960F1C003D670016ADEF /* GameScene.swift in Sources */,
+				044F960D1C003D670016ADEF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044F96181C003D670016ADEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044F96211C003D670016ADEF /* Aubade_Word_AcrobatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044F96231C003D670016ADEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044F962C1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		044F961E1C003D670016ADEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 044F96081C003D670016ADEF /* Aubade Word Acrobat */;
+			targetProxy = 044F961D1C003D670016ADEF /* PBXContainerItemProxy */;
+		};
+		044F96291C003D670016ADEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 044F96081C003D670016ADEF /* Aubade Word Acrobat */;
+			targetProxy = 044F96281C003D670016ADEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		044F96141C003D670016ADEF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044F96151C003D670016ADEF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		044F962E1C003D670016ADEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		044F962F1C003D670016ADEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		044F96311C003D670016ADEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Aubade Word Acrobat/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.housemixer.Aubade-Word-Acrobat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		044F96321C003D670016ADEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Aubade Word Acrobat/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.housemixer.Aubade-Word-Acrobat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		044F96341C003D670016ADEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Aubade Word AcrobatTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.housemixer.Aubade-Word-AcrobatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aubade Word Acrobat.app/Contents/MacOS/Aubade Word Acrobat";
+			};
+			name = Debug;
+		};
+		044F96351C003D670016ADEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Aubade Word AcrobatTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.housemixer.Aubade-Word-AcrobatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aubade Word Acrobat.app/Contents/MacOS/Aubade Word Acrobat";
+			};
+			name = Release;
+		};
+		044F96371C003D670016ADEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Aubade Word AcrobatUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.housemixer.Aubade-Word-AcrobatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Aubade Word Acrobat";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		044F96381C003D670016ADEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Aubade Word AcrobatUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.housemixer.Aubade-Word-AcrobatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Aubade Word Acrobat";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		044F96041C003D670016ADEF /* Build configuration list for PBXProject "Aubade Word Acrobat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044F962E1C003D670016ADEF /* Debug */,
+				044F962F1C003D670016ADEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		044F96301C003D670016ADEF /* Build configuration list for PBXNativeTarget "Aubade Word Acrobat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044F96311C003D670016ADEF /* Debug */,
+				044F96321C003D670016ADEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		044F96331C003D670016ADEF /* Build configuration list for PBXNativeTarget "Aubade Word AcrobatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044F96341C003D670016ADEF /* Debug */,
+				044F96351C003D670016ADEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		044F96361C003D670016ADEF /* Build configuration list for PBXNativeTarget "Aubade Word AcrobatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044F96371C003D670016ADEF /* Debug */,
+				044F96381C003D670016ADEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 044F96011C003D670016ADEF /* Project object */;
+}
