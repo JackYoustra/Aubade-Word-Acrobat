@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var skView: SKView!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        AubadeFileInteractor.setupAubade();
         /* Pick a size for the scene */
         if let scene = GameScene(fileNamed:"GameScene") {
             /* Set the scale mode to scale to fit the window */

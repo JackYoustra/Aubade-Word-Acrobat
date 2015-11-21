@@ -14,6 +14,8 @@
 		044F96161C003D670016ADEF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044F96141C003D670016ADEF /* MainMenu.xib */; };
 		044F96211C003D670016ADEF /* Aubade_Word_AcrobatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F96201C003D670016ADEF /* Aubade_Word_AcrobatTests.swift */; };
 		044F962C1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F962B1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift */; };
+		044F963A1C003DEC0016ADEF /* Aubade.txt in Resources */ = {isa = PBXBuildFile; fileRef = 044F96391C003DEC0016ADEF /* Aubade.txt */; };
+		044F963C1C003E0D0016ADEF /* AubadeFileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F963B1C003E0D0016ADEF /* AubadeFileInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		044F96271C003D670016ADEF /* Aubade Word AcrobatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aubade Word AcrobatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044F962B1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aubade_Word_AcrobatUITests.swift; sourceTree = "<group>"; };
 		044F962D1C003D670016ADEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044F96391C003DEC0016ADEF /* Aubade.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Aubade.txt; sourceTree = "<group>"; };
+		044F963B1C003E0D0016ADEF /* AubadeFileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AubadeFileInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				044F96121C003D670016ADEF /* Assets.xcassets */,
 				044F96141C003D670016ADEF /* MainMenu.xib */,
 				044F96171C003D670016ADEF /* Info.plist */,
+				044F96391C003DEC0016ADEF /* Aubade.txt */,
+				044F963B1C003E0D0016ADEF /* AubadeFileInteractor.swift */,
 			);
 			path = "Aubade Word Acrobat";
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			files = (
 				044F96131C003D670016ADEF /* Assets.xcassets in Resources */,
 				044F96111C003D670016ADEF /* GameScene.sks in Resources */,
+				044F963A1C003DEC0016ADEF /* Aubade.txt in Resources */,
 				044F96161C003D670016ADEF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044F963C1C003E0D0016ADEF /* AubadeFileInteractor.swift in Sources */,
 				044F960F1C003D670016ADEF /* GameScene.swift in Sources */,
 				044F960D1C003D670016ADEF /* AppDelegate.swift in Sources */,
 			);
