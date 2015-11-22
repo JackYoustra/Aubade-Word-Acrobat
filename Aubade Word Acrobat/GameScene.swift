@@ -63,33 +63,13 @@ class GameScene: SKScene {
                         for node in self.children{
                             if let textNode = node as? SKLabelNode{
                                 if textNode.text == currentWord && textNode.physicsBody?.pinned == false{
-                                    // calculate
-                                    let destination = CGPoint(x: currentX+(textNode.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*15) // take into account centering
+                                    textNode.zRotation = 0.0
+                                    
+                                    textNode.position = CGPoint(x: currentX+(textNode.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*15) // take into account centering
                                     currentX += textNode.frame.size.width
-                                    
                                     print("\(textNode.frame.origin)")
-                                    
-                                    // move
-                                    //textNode.position = destination
-                                    let moveToPoint = SKAction.moveTo(destination, duration: 2.0)
-                                    let pushUp = SKAction.runBlock({ () -> Void in
-                                        textNode.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 25.0))
-                                    })
-                                    textNode.runAction(SKAction.sequence(
-                                        [
-                                            pushUp,
-                                            SKAction.waitForDuration(0.5),
-                                            moveToPoint,
-                                        ]),
-                                        completion: { () -> Void in
-                                            // fix node
-                                            textNode.position = destination
-                                            textNode.zRotation = 0.0
-                                            textNode.physicsBody?.pinned = true
-                                            textNode.physicsBody?.allowsRotation = false
-                                    })
-                                    
-                                    
+                                    textNode.physicsBody?.pinned = true
+                                    textNode.physicsBody?.allowsRotation = false
                                     break
                                 }
                             }
