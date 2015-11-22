@@ -19,6 +19,7 @@ class GameScene: SKScene {
     var start: Bool = false;
     let title = SKLabelNode(fontNamed:"Cornerstone")
     var positionTable = Dictionary<SKLabelNode, CGPoint>(minimumCapacity: AubadeFileInteractor.getWords().count) // holds labels and where they should go when clicked on
+    var lineNodeTable = Dictionary<String, Array<SKLabelNode>>()
     
     func initialization(){
         self.backgroundColor = SKColor.blackColor()
@@ -57,43 +58,32 @@ class GameScene: SKScene {
             for var index = 0; index < lines.count; ++index{
                 let line = lines[index]
                 if line.containsString(wordText){
-                    let wordsInLine = line.componentsSeparatedByString(" ")
-                    
-                    for currentWord in wordsInLine {
-                        for node in self.children{
-                            if let textNode = node as? SKLabelNode{
-                                if textNode.text == currentWord && textNode.physicsBody?.pinned == false{
-                                    // calculate
-                                    let destination = positionTable[textNode]!
-                                    
-                                    // move
-                                    //textNode.position = destination
-                                    let moveToPoint = SKAction.moveTo(destination, duration: 2.0)
-                                    let pushUp = SKAction.runBlock({ () -> Void in
-                                        textNode.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 25.0))
-                                    })
-                                    textNode.runAction(SKAction.sequence(
-                                        [
-                                            pushUp,
-                                            SKAction.waitForDuration(0.5),
-                                            moveToPoint,
-                                        ]),
-                                        completion: { () -> Void in
-                                            // fix node
-                                            textNode.position = destination
-                                            textNode.zRotation = 0.0
-                                            textNode.physicsBody?.pinned = true
-                                            textNode.physicsBody?.allowsRotation = false
-                                            textNode.physicsBody?.dynamic = false
-                                    })
-                                    
-                                    break
-                                }
-                            }
-                        }
+                    let nodes = lineNodeTable[line]!
+                    for textNode in nodes{
+                        // calculate
+                        let destination = positionTable[textNode]!
                         
+                        // move
+                        //textNode.position = destination
+                        let moveToPoint = SKAction.moveTo(destination, duration: 2.0)
+                        let pushUp = SKAction.runBlock({ () -> Void in
+                            textNode.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 25.0))
+                        })
+                        textNode.runAction(SKAction.sequence(
+                            [
+                                pushUp,
+                                SKAction.waitForDuration(0.5),
+                                moveToPoint,
+                            ]),
+                            completion: { () -> Void in
+                                // fix node
+                                textNode.position = destination
+                                textNode.zRotation = 0.0
+                                textNode.physicsBody?.pinned = true
+                                textNode.physicsBody?.allowsRotation = false
+                                textNode.physicsBody?.dynamic = false
+                        })
                     }
-                    
                     break
                 }
             }
@@ -123,16 +113,19 @@ class GameScene: SKScene {
         for var index = 0; index < lines.count; ++index{
             let line = lines[index]
             let wordsInLine = line.componentsSeparatedByString(" ")
+            var lineNodes = Array<SKLabelNode>()
             var currentX: CGFloat = 0.0
             for word in wordsInLine{
                 let label = createWordLabel(word)
                 let poemPlacement = CGPoint(x: currentX+(label.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*15) // take into account centering
                 currentX += label.frame.size.width
                 positionTable[label] = poemPlacement
+                lineNodes.append(label)
                 
                 label.position = CGPoint(x:CGFloat(arc4random() % UInt32(UInt(self.frame.size.width))), y:self.frame.size.height-50);
                 self.addChild(label)
             }
+            lineNodeTable[line] = lineNodes
         }
     }
     
