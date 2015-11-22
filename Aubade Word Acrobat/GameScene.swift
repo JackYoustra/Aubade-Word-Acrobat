@@ -57,7 +57,18 @@ class GameScene: SKScene {
             
             for var index = 0; index < lines.count; ++index{
                 let line = lines[index]
-                if line.containsString(wordText){
+                if lineNodeTable[line]![0].physicsBody?.pinned == true{ // check for already on
+                    continue
+                }
+                let words = line.componentsSeparatedByString(" ")
+                var containsYes = false
+                for word in words{
+                    if word == wordText{
+                        containsYes = true
+                        break
+                    }
+                }
+                if containsYes {
                     let nodes = lineNodeTable[line]!
                     for textNode in nodes{
                         // calculate
@@ -139,6 +150,8 @@ class GameScene: SKScene {
         label.name = "word"
         label.physicsBody = SKPhysicsBody(rectangleOfSize: label.frame.size)
         label.physicsBody?.mass = 0.01
+        label.physicsBody?.restitution = 0.5
+        label.physicsBody?.angularDamping = 0.3
         return label
     }
 }
