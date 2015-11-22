@@ -21,7 +21,7 @@ public class AubadeFileInteractor{
 
         // lines
         let newlineChars = NSCharacterSet.newlineCharacterSet()
-        let lines = fileContent.utf16.split { newlineChars.characterIsMember($0) }.flatMap(String.init)
+        lines = fileContent.utf16.split { newlineChars.characterIsMember($0) }.flatMap(String.init)
         
         // words
         let builder = NSMutableArray(capacity: lines.count)
@@ -34,5 +34,13 @@ public class AubadeFileInteractor{
         words = builder as NSArray as! [String];
         
 //        print("Lines: \(lines) and words: \(words)")
+    }
+    
+    public static func getLines() -> [String]{
+        return lines;
+    }
+    
+    public static func getWords() -> [String]{
+        return words;
     }
 }
