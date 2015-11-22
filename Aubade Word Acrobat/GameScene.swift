@@ -18,6 +18,7 @@ struct PhysicsCategory {
 class GameScene: SKScene {
     var start: Bool = false;
     let title = SKLabelNode(fontNamed:"Cornerstone")
+    var positionTable = Dictionary<SKLabelNode, CGPoint>(minimumCapacity: AubadeFileInteractor.getWords().count) // holds labels and where they should go when clicked on
     
     func initialization(){
         self.backgroundColor = SKColor.blackColor()
@@ -57,18 +58,13 @@ class GameScene: SKScene {
                 let line = lines[index]
                 if line.containsString(wordText){
                     let wordsInLine = line.componentsSeparatedByString(" ")
-                    var currentX: CGFloat = 0.0
                     
                     for currentWord in wordsInLine {
                         for node in self.children{
                             if let textNode = node as? SKLabelNode{
                                 if textNode.text == currentWord && textNode.physicsBody?.pinned == false{
                                     // calculate
-                                    let rotation = textNode.zRotation
-                                    textNode.zRotation = 0.0 // for measuring
-                                    let destination = CGPoint(x: currentX+(textNode.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*15) // take into account centering
-                                    //textNode.zRotation = rotation // and reset
-                                    currentX += textNode.frame.size.width
+                                    let destination = positionTable[textNode]!
                                     
                                     // move
                                     //textNode.position = destination
@@ -91,18 +87,6 @@ class GameScene: SKScene {
                                             textNode.physicsBody?.dynamic = false
                                     })
                                     
-                                    textNode.runAction(SKAction.sequence(
-                                        [
-                                            SKAction.waitForDuration(2.5),
-                                            SKAction.runBlock({ () -> Void in
-                                                textNode.position = destination
-                                                textNode.zRotation = 0.0
-                                                textNode.physicsBody?.pinned = true
-                                                textNode.physicsBody?.allowsRotation = false
-                                                textNode.physicsBody?.dynamic = false
-                                            })
-                                        ]
-                                    ))
                                     break
                                 }
                             }
@@ -134,11 +118,21 @@ class GameScene: SKScene {
         // cleanup
         title.removeFromParent()
         
-        let words = AubadeFileInteractor.getWords();
-        for word in words{
-            let label = createWordLabel(word)
-            label.position = CGPoint(x:CGFloat(arc4random() % UInt32(UInt(self.frame.size.width))), y:self.frame.size.height-50);
-            self.addChild(label)
+        let lines = AubadeFileInteractor.getLines();
+        
+        for var index = 0; index < lines.count; ++index{
+            let line = lines[index]
+            let wordsInLine = line.componentsSeparatedByString(" ")
+            var currentX: CGFloat = 0.0
+            for word in wordsInLine{
+                let label = createWordLabel(word)
+                let poemPlacement = CGPoint(x: currentX+(label.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*15) // take into account centering
+                currentX += label.frame.size.width
+                positionTable[label] = poemPlacement
+                
+                label.position = CGPoint(x:CGFloat(arc4random() % UInt32(UInt(self.frame.size.width))), y:self.frame.size.height-50);
+                self.addChild(label)
+            }
         }
     }
     
