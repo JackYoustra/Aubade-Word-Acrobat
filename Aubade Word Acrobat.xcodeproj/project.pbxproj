@@ -16,6 +16,7 @@
 		044F962C1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F962B1C003D670016ADEF /* Aubade_Word_AcrobatUITests.swift */; };
 		044F963A1C003DEC0016ADEF /* Aubade.txt in Resources */ = {isa = PBXBuildFile; fileRef = 044F96391C003DEC0016ADEF /* Aubade.txt */; };
 		044F963C1C003E0D0016ADEF /* AubadeFileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F963B1C003E0D0016ADEF /* AubadeFileInteractor.swift */; };
+		045E2D9F1C0255DC00402E5A /* AubadeWordImportance.txt in Resources */ = {isa = PBXBuildFile; fileRef = 045E2D9E1C0255DC00402E5A /* AubadeWordImportance.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		044F962D1C003D670016ADEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044F96391C003DEC0016ADEF /* Aubade.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Aubade.txt; sourceTree = "<group>"; };
 		044F963B1C003E0D0016ADEF /* AubadeFileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AubadeFileInteractor.swift; sourceTree = "<group>"; };
+		045E2D9E1C0255DC00402E5A /* AubadeWordImportance.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AubadeWordImportance.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				044F96171C003D670016ADEF /* Info.plist */,
 				044F96391C003DEC0016ADEF /* Aubade.txt */,
 				044F963B1C003E0D0016ADEF /* AubadeFileInteractor.swift */,
+				045E2D9E1C0255DC00402E5A /* AubadeWordImportance.txt */,
 			);
 			path = "Aubade Word Acrobat";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				044F96131C003D670016ADEF /* Assets.xcassets in Resources */,
 				044F96111C003D670016ADEF /* GameScene.sks in Resources */,
 				044F963A1C003DEC0016ADEF /* Aubade.txt in Resources */,
+				045E2D9F1C0255DC00402E5A /* AubadeWordImportance.txt in Resources */,
 				044F96161C003D670016ADEF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +493,7 @@
 				044F96321C003D670016ADEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		044F96331C003D670016ADEF /* Build configuration list for PBXNativeTarget "Aubade Word AcrobatTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				044F96351C003D670016ADEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		044F96361C003D670016ADEF /* Build configuration list for PBXNativeTarget "Aubade Word AcrobatUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				044F96381C003D670016ADEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

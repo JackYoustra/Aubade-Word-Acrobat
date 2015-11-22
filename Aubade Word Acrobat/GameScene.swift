@@ -109,6 +109,7 @@ class GameScene: SKScene {
         title.removeFromParent()
         
         let lines = AubadeFileInteractor.getLines();
+        let importance = AubadeFileInteractor.getWordImportance()
         
         for var index = 0; index < lines.count; ++index{
             let line = lines[index]
@@ -117,7 +118,9 @@ class GameScene: SKScene {
             var currentX: CGFloat = 0.0
             for word in wordsInLine{
                 let label = createWordLabel(word)
-                let poemPlacement = CGPoint(x: currentX+(label.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*15) // take into account centering
+                label.fontSize = label.fontSize + (CGFloat(importance[word.lowercaseString]!) * 2.0)
+                
+                let poemPlacement = CGPoint(x: currentX+(label.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*14 - 15) // take into account centering & top row
                 currentX += label.frame.size.width
                 positionTable[label] = poemPlacement
                 lineNodes.append(label)
@@ -132,7 +135,7 @@ class GameScene: SKScene {
     func createWordLabel(word: String) -> SKLabelNode{
         let label = SKLabelNode(text: word)
         label.fontName = "Cornerstone"
-        label.fontSize = 12
+        label.fontSize = 8
         label.name = "word"
         label.physicsBody = SKPhysicsBody(rectangleOfSize: label.frame.size)
         label.physicsBody?.mass = 0.01

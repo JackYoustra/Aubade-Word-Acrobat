@@ -10,8 +10,10 @@ import Foundation
 
 public class AubadeFileInteractor{
     private static var fileContent: String = "";
-    private static var lines: [String] = Array();
+    private static var importanceContent = "";
+    private static var poemLines: [String] = Array();
     private static var words: [String] = Array();
+    private static var wordImportance: Dictionary<String, Int> = Dictionary()
     
     public static func setupAubade(){
         // file
@@ -19,13 +21,15 @@ public class AubadeFileInteractor{
         let file = try? NSString(contentsOfFile: dir as String, encoding: NSUTF8StringEncoding);
         fileContent = file as! String
 
+        importanceContent = try! NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("AubadeWordImportance", ofType: "txt")! as String, encoding: NSUTF8StringEncoding) as String;
+        
         // lines
         let newlineChars = NSCharacterSet.newlineCharacterSet()
-        lines = fileContent.utf16.split { newlineChars.characterIsMember($0) }.flatMap(String.init)
+        poemLines = fileContent.utf16.split { newlineChars.characterIsMember($0) }.flatMap(String.init)
         
         // words
-        let builder = NSMutableArray(capacity: lines.count)
-        for line: NSString! in lines{
+        let builder = NSMutableArray(capacity: poemLines.count)
+        for line: String in poemLines{
             let wordArr = line.componentsSeparatedByString(" ")
             for word: NSString! in wordArr{
                 builder.addObject(word)
@@ -33,14 +37,25 @@ public class AubadeFileInteractor{
         }
         words = builder as NSArray as! [String];
         
+        // word importance
+        let importanceLines = importanceContent.utf16.split { newlineChars.characterIsMember($0) }.flatMap(String.init)
+        for line: String in importanceLines{
+            let dichotomy = line.componentsSeparatedByString(" ")
+            wordImportance[dichotomy[0].lowercaseString] = Int(dichotomy[1])!
+        }
+                
 //        print("Lines: \(lines) and words: \(words)")
     }
     
     public static func getLines() -> [String]{
-        return lines;
+        return poemLines;
     }
     
     public static func getWords() -> [String]{
         return words;
+    }
+    
+    public static func getWordImportance() -> Dictionary<String, Int>{
+        return wordImportance;
     }
 }
