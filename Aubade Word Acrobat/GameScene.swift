@@ -93,6 +93,19 @@ class GameScene: SKScene {
                                 textNode.physicsBody?.pinned = true
                                 textNode.physicsBody?.allowsRotation = false
                                 textNode.physicsBody?.dynamic = false
+                                var over = true
+                                for child in self.children{
+                                    let textChild = child as? SKLabelNode
+                                    if textChild != nil{
+                                        if textChild?.physicsBody?.pinned == false{
+                                            over = false
+                                            break
+                                        }
+                                    }
+                                }
+                                if over{
+                                    self.gameOver()
+                                }
                         })
                     }
                     break
@@ -113,6 +126,33 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+    }
+    
+    func gameOver(){
+        for child in self.children{
+            let textChild = child as? SKLabelNode
+            if textChild != nil{
+                let destination = CGPoint(x: textChild!.position.x + (self.frame.size.width/2) - 100, y: textChild!.position.y)
+                textChild!.runAction(SKAction.sequence(
+                    [
+                        SKAction.waitForDuration(0.5),
+                        SKAction.moveTo(destination, duration: 5.0),
+                        SKAction.waitForDuration(0.5),
+                        SKAction.runBlock({ () -> Void in
+                            // cleanup and explode
+                            textChild!.physicsBody?.pinned = false
+                            textChild!.physicsBody?.allowsRotation = true
+                            textChild!.physicsBody?.dynamic = true
+                            textChild!.physicsBody?.applyImpulse(CGVector(dx: self.randomVelocity(), dy: self.randomVelocity()))
+                        })
+                    ]
+                ))
+            }
+        }
+    }
+    
+    func randomVelocity() ->Double{
+        return (10.0 - Double(arc4random_uniform(100))/5.0) * 2.0
     }
     
     func initialExplosion(){
