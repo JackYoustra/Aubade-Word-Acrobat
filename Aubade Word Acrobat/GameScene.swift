@@ -64,10 +64,11 @@ class GameScene: SKScene {
                             if let textNode = node as? SKLabelNode{
                                 if textNode.text == currentWord && textNode.physicsBody?.pinned == false{
                                     // calculate
+                                    let rotation = textNode.zRotation
+                                    textNode.zRotation = 0.0 // for measuring
                                     let destination = CGPoint(x: currentX+(textNode.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*15) // take into account centering
+                                    //textNode.zRotation = rotation // and reset
                                     currentX += textNode.frame.size.width
-                                    
-                                    print("\(textNode.frame.origin)")
                                     
                                     // move
                                     //textNode.position = destination
@@ -87,9 +88,21 @@ class GameScene: SKScene {
                                             textNode.zRotation = 0.0
                                             textNode.physicsBody?.pinned = true
                                             textNode.physicsBody?.allowsRotation = false
+                                            textNode.physicsBody?.dynamic = false
                                     })
                                     
-                                    
+                                    textNode.runAction(SKAction.sequence(
+                                        [
+                                            SKAction.waitForDuration(2.5),
+                                            SKAction.runBlock({ () -> Void in
+                                                textNode.position = destination
+                                                textNode.zRotation = 0.0
+                                                textNode.physicsBody?.pinned = true
+                                                textNode.physicsBody?.allowsRotation = false
+                                                textNode.physicsBody?.dynamic = false
+                                            })
+                                        ]
+                                    ))
                                     break
                                 }
                             }
