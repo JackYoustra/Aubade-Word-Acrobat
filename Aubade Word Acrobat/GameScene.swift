@@ -171,16 +171,40 @@ class GameScene: SKScene {
                 let label = createWordLabel(word)
                 label.fontSize = label.fontSize + (CGFloat(importance[word.lowercaseString]!) * 2.0)
                 
-                let poemPlacement = CGPoint(x: currentX+(label.frame.size.width/2), y: CGRectGetMaxY(self.frame) - CGFloat(index)*14 - 15) // take into account centering & top row
+                // calculate
+                let poemPlacement = CGPoint(x: currentX+(label.frame.size.width/2) + 10, y: CGRectGetMaxY(self.frame) - CGFloat(index)*14 - 15) // take into account centering & top row
                 currentX += label.frame.size.width
                 positionTable[label] = poemPlacement
                 lineNodes.append(label)
                 
+                // place
+                /*
                 label.position = CGPoint(x:CGFloat(arc4random() % UInt32(UInt(self.frame.size.width))), y:self.frame.size.height-50);
                 self.addChild(label)
+                */
             }
             lineNodeTable[line] = lineNodes
         }
+        let lineLabels = lineNodeTable.values
+        var actionQueue = Array<SKAction>()
+
+        for var currentImportance = 1; currentImportance <= 5; ++currentImportance{
+            for lineLabelArr in lineLabels{
+                for label in lineLabelArr{
+                    if importance[label.text!.lowercaseString] == currentImportance{
+                        actionQueue.append(SKAction.runBlock({ () -> Void in
+                            let modBase = UInt32(UInt(self.frame.size.width-label.frame.size.width))
+                            let xCoordinate = CGFloat(UInt32(label.frame.size.width/2.0) + arc4random() % modBase)
+                            label.position = CGPoint(x:xCoordinate, y:self.frame.size.height-label.frame.size.height-30);
+                            self.addChild(label)
+                        }))
+                    }
+                }
+            }
+        }
+        
+        self.runAction(SKAction.sequence(actionQueue))
+        
     }
     
     func createWordLabel(word: String) -> SKLabelNode{
