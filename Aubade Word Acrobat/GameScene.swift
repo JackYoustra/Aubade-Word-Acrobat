@@ -17,6 +17,7 @@ struct PhysicsCategory {
 
 class GameScene: SKScene {
     var start: Bool = false;
+    var falling: Bool = false
     let title = SKLabelNode(fontNamed:"Cornerstone")
     var positionTable = Dictionary<SKLabelNode, CGPoint>(minimumCapacity: AubadeFileInteractor.getWords().count) // holds labels and where they should go when clicked on
     var lineNodeTable = Dictionary<String, Array<SKLabelNode>>()
@@ -42,9 +43,13 @@ class GameScene: SKScene {
         if(!start){
             start = true
             initialExplosion();
+            falling = true
             return;
         }
         
+        if falling{
+            return
+        }
         
         let location = theEvent.locationInNode(self)
         let clickedNode = self.nodeAtPoint(location)
@@ -204,7 +209,9 @@ class GameScene: SKScene {
             }
         }
         
-        self.runAction(SKAction.sequence(actionQueue))
+        self.runAction(SKAction.sequence(actionQueue)) { () -> Void in
+            self.falling = false
+        }
         
     }
     
