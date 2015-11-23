@@ -192,12 +192,13 @@ class GameScene: SKScene {
             for lineLabelArr in lineLabels{
                 for label in lineLabelArr{
                     if importance[label.text!.lowercaseString] == currentImportance{
-                        actionQueue.append(SKAction.runBlock({ () -> Void in
+                        let action = SKAction.runBlock({ () -> Void in
                             let modBase = UInt32(UInt(self.frame.size.width-label.frame.size.width))
                             let xCoordinate = CGFloat(UInt32(label.frame.size.width/2.0) + arc4random() % modBase)
                             label.position = CGPoint(x:xCoordinate, y:self.frame.size.height-label.frame.size.height-30);
                             self.addChild(label)
-                        }))
+                        })
+                        actionQueue.append(SKAction.sequence([action, SKAction.waitForDuration(0.25)]))
                     }
                 }
             }

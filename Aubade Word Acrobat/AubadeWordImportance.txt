@@ -231,7 +231,7 @@ with 1
 sun. 2
 has 1
 done. 3
-Postmen 4
+Postmen 3
 like 1
 doctors 3
 go 1
