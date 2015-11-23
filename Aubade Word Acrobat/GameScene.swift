@@ -137,7 +137,7 @@ class GameScene: SKScene {
         for child in self.children{
             let textChild = child as? SKLabelNode
             if textChild != nil{
-                let destination = CGPoint(x: textChild!.position.x + (self.frame.size.width/2) - 100, y: textChild!.position.y)
+                let destination = CGPoint(x: textChild!.position.x + (self.frame.size.width/2) - 140, y: textChild!.position.y)
                 textChild!.runAction(SKAction.sequence(
                     [
                         SKAction.waitForDuration(0.5),
